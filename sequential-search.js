@@ -1,5 +1,6 @@
 /*
 * sequential or linear search
+* complexity of the algorithm - O(n)
 */
 function sequentialSearch(arr, data) {
   for (let i = 0; i < arr.length; ++i) {
