@@ -18,7 +18,16 @@
 
 			// binary search
 			const binSearch = binarySearch([20, 12, 18, 17, 13, 14, 11, 16, 19, 15], 15);
-			console.log(`Binary search - is data in array: ${binSearch}`);
+			let binSearchDisplay;
+			if(binSearch !== -1) {
+				binSearchDisplay = true;
+			} else {
+				binSearchDisplay = false;
+			}
+			console.log(`Binary search - is data in array: ${binSearchDisplay}`);
+			const binCountOccur = binCount([20, 12, 13, 18, 17, 13, 14, 11, 16, 19, 15], 13);
+			console.log(`Binary search count occurences of data in array: ${binCountOccur}`);
+			
 			
 		});
 	</script>
