@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Algorithms</title>
+</head>
+<body>
+
+	<script src="sequential-search.js"></script>
+	<script src="binary-search.js"></script>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", () => {
+
+			// sequential search
+			const seqSearch = sequentialSearch([20, 12, 18, 17, 13, 14, 11, 16, 19, 15], 15);
+			console.log(`Sequential search - is data in array: ${seqSearch}`);
+
+			// binary search
+			const binSearch = binarySearch([20, 12, 18, 17, 13, 14, 11, 16, 19, 15], 15);
+			console.log(`Binary search - is data in array: ${binSearch}`);
+			
+		});
+	</script>
+</body>
+</html>
