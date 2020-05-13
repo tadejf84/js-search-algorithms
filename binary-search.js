@@ -27,9 +27,8 @@ function binarySearch(arr, data) {
         } else if (arr[mid] > data) {
             end = mid - 1;
         } else {
-            return mid; // Found position
+			return mid; // Found position
 		}
-		
 	}
 	
     return -1; // Not found
