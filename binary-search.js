@@ -11,27 +11,27 @@
  */
 function binarySearch(arr, data) {
 
-    // Sort array first
-    arr.sort((a, b) => a - b);
+	// Sort array first
+	arr.sort((a, b) => a - b);
 
-    // Define bounds
-    let start = 0, end = arr.length - 1;
+	// Define bounds
+	let start = 0, end = arr.length - 1;
 
-    while (start <= end) {
-			
+	while (start <= end) {
+
 		// Set midpoint
-        const mid = Math.floor((end + start) / 2);
-			
-        if (arr[mid] < data) {
-            start = mid + 1;
-        } else if (arr[mid] > data) {
-            end = mid - 1;
-        } else {
+		const mid = Math.floor((end + start) / 2);
+
+		if (arr[mid] < data) {
+			start = mid + 1;
+		} else if (arr[mid] > data) {
+			end = mid - 1;
+		} else {
 			return mid; // Found position
 		}
 	}
-	
-    return -1; // Not found
+
+	return -1; // Not found
 }
 
 
