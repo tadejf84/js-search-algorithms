@@ -1,24 +1,17 @@
-/*
-* sequential or linear search
-* complexity of the algorithm - O(n)
-*/
+/**
+ * Sequential or linear search algorithm
+ * 
+ * @param {array} arr 
+ * @param {number} data 
+ * 
+ * @returns {boolean} found in search
+ */
 function sequentialSearch(arr, data) {
-  for (let i = 0; i < arr.length; ++i) {
-    if (arr[i] == data) {
-      return true;
+    for (let i = 0; i < arr.length; ++i) {
+        if (arr[i] == data) {
+            return true;
+        }
     }
-  }
-  return false;
-}
-
-/*
-* search using indexof method
-*/
-function sequentialSearch2(arr, data) {
-  if(arr.indexOf(data) !== -1) {
-    return true;
-  } else {
     return false;
-  }
 }
 
