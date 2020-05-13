@@ -12,15 +12,17 @@
 	<script>
 		document.addEventListener("DOMContentLoaded", () => {
 
-			// sequential search
+			// Sequential search
 			const seqSearch = sequentialSearch([20, 12, 18, 17, 13, 14, 11, 16, 19, 15], 15);
 			console.log(`Sequential search - is data in array: ${seqSearch}`);
 
-			// binary search
+			// Binary search
 			const binSearch = binarySearch([20, 12, 18, 17, 13, 14, 11, 16, 19, 15], 15);
 			console.log(`Binary search - position of data in array: ${binSearch}`);
-			const binCountOccur = binaryCount([20, 12, 13, 18, 17, 13, 14, 11, 16, 19, 15, 13], 13);
-			console.log(`Binary search count occurences of data in array: ${binCountOccur}`);
+
+			// Binary search occurences
+			const binCountOccurences = binaryCount([20, 12, 13, 18, 17, 13, 14, 11, 16, 19, 15, 13], 13);
+			console.log(`Binary search count occurences of data in array: ${binCountOccurences}`);
 			
 			
 		});
