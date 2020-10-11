@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Search Algorithms</title>
+    <meta charset="UTF-8">
+    <title>Search Algorithms</title>
+    <script src="sequential-search.js"></script>
+    <script src="binary-search.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            // Sequential search
+            const seqSearch = sequentialSearch([20, 12, 18, 17, 13, 14, 11, 16, 19, 15], 15);
+            console.log(`Sequential search - is data in array: ${seqSearch}`);
+
+            // Binary search
+            const binSearch = binarySearch([20, 12, 18, 17, 13, 14, 11, 16, 19, 15], 15);
+            console.log(`Binary search - position of data in array: ${binSearch}`);
+
+            // Binary search occurences
+            const binCountOccurences = binaryCount([20, 12, 13, 18, 17, 13, 14, 11, 16, 19, 15, 13], 13);
+            console.log(`Binary search count occurences of data in array: ${binCountOccurences}`);
+            
+        });
+    </script>
 </head>
 <body>
-
-	<script src="sequential-search.js"></script>
-	<script src="binary-search.js"></script>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", () => {
-
-			// Sequential search
-			const seqSearch = sequentialSearch([20, 12, 18, 17, 13, 14, 11, 16, 19, 15], 15);
-			console.log(`Sequential search - is data in array: ${seqSearch}`);
-
-			// Binary search
-			const binSearch = binarySearch([20, 12, 18, 17, 13, 14, 11, 16, 19, 15], 15);
-			console.log(`Binary search - position of data in array: ${binSearch}`);
-
-			// Binary search occurences
-			const binCountOccurences = binaryCount([20, 12, 13, 18, 17, 13, 14, 11, 16, 19, 15, 13], 13);
-			console.log(`Binary search count occurences of data in array: ${binCountOccurences}`);
-			
-			
-		});
-	</script>
+    
 </body>
 </html>
