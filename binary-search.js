@@ -11,27 +11,27 @@
  */
 function binarySearch(arr, data) {
 
-	// Sort array first
-	arr.sort((a, b) => a - b);
+    // Sort array first
+    arr.sort((a, b) => a - b);
 
-	// Define bounds
-	let start = 0, end = arr.length - 1;
+    // Define bounds
+    let start = 0, end = arr.length - 1;
 
-	while (start <= end) {
+    while (start <= end) {
 
-		// Set midpoint
-		const mid = Math.floor((end + start) / 2);
+        // Set midpoint
+        const mid = Math.floor((end + start) / 2);
 
-		if (arr[mid] < data) {
-			start = mid + 1;
-		} else if (arr[mid] > data) {
-			end = mid - 1;
-		} else {
-			return mid; // Found position
-		}
-	}
+        if (arr[mid] < data) {
+            start = mid + 1;
+        } else if (arr[mid] > data) {
+            end = mid - 1;
+        } else {
+            return mid; // Found position
+        }
+    }
 
-	return -1; // Not found
+    return -1; // Not found
 }
 
 
@@ -44,24 +44,24 @@ function binarySearch(arr, data) {
  * @returns {number} count occurences
  */
 function binaryCount(arr, data) {	
-	let count = 0;
-	
-	// Get position of data
-	const pos = binarySearch(arr, data);
-	
-	if (pos !== -1) {
-		count++;
-		
-		// Search to the left for occurences of data
-		for (let i = pos - 1; i >= 0; --i) {
-			if (arr[i] === data) count++;
-		}
-		
-		// Search to the right for occurences of data
-		for (let i = pos + 1; i < arr.length; ++i) {
-			if (arr[i] === data) count++;
-		}
-	}
+    let count = 0;
 
-	return count;
+    // Get position of data
+    const pos = binarySearch(arr, data);
+
+    if (pos !== -1) {
+        count++;
+        
+        // Search to the left for occurences of data
+        for (let i = pos - 1; i >= 0; --i) {
+            if (arr[i] === data) count++;
+        }
+        
+        // Search to the right for occurences of data
+        for (let i = pos + 1; i < arr.length; ++i) {
+            if (arr[i] === data) count++;
+        }
+    }
+
+    return count;
 }
